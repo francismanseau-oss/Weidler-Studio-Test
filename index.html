@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta name="color-scheme" content="dark">
+    <title>Weidler Studio</title>
+    <link rel="icon" href="logo%20weidlerstudio.png" type="image/png">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="page-home">
+    <script src="js/site-bg.js"></script>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="header-brand">
+                <a href="index.html" class="logo-link">
+                    <img src="logo weidlerstudio.png" alt="" class="logo-icon" width="36" height="36">
+                    <span class="logo-text">Weidler <span>Studio</span></span>
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <a href="index.html" class="active" data-translate>Accueil</a>
+                <a href="kios/index.html" data-translate>Kios</a>
+                <a href="cribleplus/index.html">Crible+</a>
+                <a href="haven/index.html">Haven</a>
+                <a href="nexus-bridge/index.html">Nexus Bridge</a>
+                <a href="project-inspector/index.html">Project Inspector</a>
+            </nav>
+            <a href="#contact" class="header-contact" data-translate>Contact</a>
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+        <div class="lang-bar">
+            <span class="lang-status" id="langStatus" data-translate>Traduction…</span>
+            <nav class="lang-switcher" id="langFlags" aria-label="Choisir la langue">
+                <button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn active" data-lang="fr" title="Français">FR</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="de" title="Deutsch">DE</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="es" title="Español">ES</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="it" title="Italiano">IT</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="zh-CN" title="中文">ZH</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="ja" title="日本語">JA</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="pt" title="Português">PT</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="home-hero">
+            <p class="home-tagline" data-translate>Analyser. Comprendre. Corriger. Livrer.</p>
+            <h1 class="home-title">
+                <span class="home-title-line" data-translate>Je ne lâche jamais tant qu'un</span><span class="home-title-accent-line" data-translate>problème logiciel</span><span class="home-title-line" data-translate>n'est pas résolu.</span>
+            </h1>
+            <p class="home-subtitle">
+                <span data-translate>Développeur • Concepteur • </span><span class="home-subtitle-accent">Troubleshooter</span><span data-translate> • Automatisation • IA</span>
+            </p>
+            <p class="home-lead" data-translate>Je conçois des logiciels de A à Z : de l'idée jusqu'au dernier bogue corrigé. Je trouve les causes profondes, je corrige, j'optimise et je livre des solutions fiables et performantes.</p>
+            <div class="hero-actions">
+                <a href="#projets-phares" class="btn home-btn--primary" data-translate>Voir mes projets</a>
+            </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="section-services">
+            <h2 class="section-label" id="section-services" data-translate>Ce que je fais</h2>
+            <div class="home-cards-grid home-cards-grid--4">
+                <article class="home-card home-card--violet">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+                    </div>
+                    <h3 data-translate>Applications Android</h3>
+                    <p data-translate>Apps mobiles natives, performantes et pensées pour une utilisation fluide au quotidien.</p>
+                </article>
+                <article class="home-card home-card--blue">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3 data-translate>Applications Windows</h3>
+                    <p data-translate>Logiciels de bureau robustes, interfaces claires et intégration système soignée.</p>
+                </article>
+                <article class="home-card home-card--cyan">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3 data-translate>Applications Web</h3>
+                    <p data-translate>Sites et outils en ligne modernes, responsives et optimisés pour tous les écrans.</p>
+                </article>
+                <article class="home-card home-card--violet">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.4V11h3a3 3 0 0 1 3 3v1.2a2.8 2.8 0 0 1-1.6 2.5l-2.9 1.4a4 4 0 0 1-3 0l-2.9-1.4A2.8 2.8 0 0 1 6 15.2V14a3 3 0 0 1 3-3h3V9.4C10.8 8.8 10 7.5 10 6a4 4 0 0 1 2-4z"/><circle cx="12" cy="6" r="1"/></svg>
+                    </div>
+                    <h3 data-translate>Automatisation &amp; IA</h3>
+                    <p data-translate>Scripts, workflows intelligents et intégrations qui font gagner du temps concrètement.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="home-section home-section--approach" aria-labelledby="section-approach">
+            <h2 class="section-label" id="section-approach" data-translate>Ma façon de travailler</h2>
+            <div class="home-approach">
+                <div class="home-approach-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="8"/><line x1="24" y1="2" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="46"/><line x1="2" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="46" y2="24"/></svg>
+                </div>
+                <blockquote class="home-approach-quote">
+                    <p data-translate>Quand je prends un projet en charge, je ne compte pas les heures.</p>
+                    <p data-translate>Je reste concentré jusqu'à ce que le problème soit compris, corrigé et que la solution fonctionne.</p>
+                </blockquote>
+                <ul class="home-approach-list">
+                    <li data-translate>Analyse et compréhension profonde du problème</li>
+                    <li data-translate>Conception de solutions robustes et évolutives</li>
+                    <li data-translate>Développement, tests et débogage rigoureux</li>
+                    <li data-translate>Optimisation de l'expérience utilisateur</li>
+                    <li data-translate>Documentation claire et livraison complète</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="home-section" id="projets-phares" aria-labelledby="section-projects">
+            <h2 class="section-label" id="section-projects" data-translate>Projets phares</h2>
+            <div class="home-cards-grid home-cards-grid--4">
+                <a href="haven/index.html" class="home-project-card home-project-card--violet">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3>Haven</h3>
+                    <p data-translate>Prochain projet Android — calendrier et organisation personnelle.</p>
+                    <span class="home-project-link" data-translate>En savoir plus →</span>
+                </a>
+                <a href="cribleplus/index.html" class="home-project-card home-project-card--blue">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <h3>Crible+</h3>
+                    <p data-translate>Jeu de cribbage revisité pour Android. Hors ligne, rapide, sans inscription.</p>
+                    <span class="home-project-link" data-translate>En savoir plus →</span>
+                </a>
+                <a href="nexus-bridge/index.html" class="home-project-card home-project-card--cyan">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="3"/><circle cx="19" cy="6" r="3"/><circle cx="19" cy="18" r="3"/><line x1="8" y1="11" x2="16" y2="7"/><line x1="8" y1="13" x2="16" y2="17"/></svg>
+                    </div>
+                    <h3>Nexus Bridge</h3>
+                    <p data-translate>Pont Discord ↔ Cursor : prompts depuis le cellulaire, réponses dans Discord.</p>
+                    <span class="home-project-link" data-translate>En savoir plus →</span>
+                </a>
+                <a href="project-inspector/index.html" class="home-project-card home-project-card--violet">
+                    <div class="home-card-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+                    </div>
+                    <h3>Project Inspector</h3>
+                    <p data-translate>Inspectez une archive ZIP et obtenez un rapport texte prêt pour Cursor ou ChatGPT.</p>
+                    <span class="home-project-link" data-translate>En savoir plus →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-contact" id="contact" aria-label="Contact">
+            <p class="home-contact-lead" data-translate>Parlons de votre prochain projet.<br>Je vous réponds avec plaisir.</p>
+            <a href="mailto:contact@weidlerstudio.com" class="home-contact-email">contact@weidlerstudio.com</a>
+        </section>
+    </main>
+
+    <footer class="site-footer site-footer--home">
+        <p class="home-footer-tagline" data-translate>D'une idée jusqu'au dernier bogue corrigé.</p>
+        <p class="home-footer-code" aria-hidden="true">&lt;/&gt;</p>
+        <p class="home-footer-done">Job's done.</p>
+        <p class="site-footer-copy" data-translate>&copy; 2026 Weidler Studio. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>

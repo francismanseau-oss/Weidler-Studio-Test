@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta name="color-scheme" content="dark">
+    <title>Kios | Weidler Studio</title>
+    <link rel="icon" href="../logo%20weidlerstudio.png" type="image/png">
+    <link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+    <script src="../js/site-bg.js"></script>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="header-brand">
+                <a href="../index.html" class="logo-link">
+                    <img src="../logo weidlerstudio.png" alt="" class="logo-icon" width="36" height="36">
+                    <span class="logo-text">Weidler <span>Studio</span></span>
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <a href="../index.html" data-translate>Accueil</a>
+                <a href="index.html" class="active">Kios</a>
+                <a href="../cribleplus/index.html">Crible+</a>
+                <a href="../haven/index.html">Haven</a>
+                <a href="../nexus-bridge/index.html">Nexus Bridge</a>
+                <a href="../project-inspector/index.html">Project Inspector</a>
+            </nav>
+            <a href="../index.html#contact" class="header-contact" data-translate>Contact</a>
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+        <div class="lang-bar">
+            <span class="lang-status" id="langStatus" data-translate>Traduction…</span>
+            <nav class="lang-switcher" id="langFlags" aria-label="Choisir la langue">
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="de">DE</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="es">ES</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="it">IT</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="zh-CN">ZH</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="ja">JA</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="pt">PT</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div>
+                <span class="badge badge-dev" data-translate>En développement</span>
+                <h1>Kios</h1>
+                <p class="lead" data-translate>Kios est une expérience de simulation pure, sans menu ni interface, où votre connexion à la nature est directe. Agissez sur l'équilibre d'un monde vivant qui évolue selon ses propres cycles biologiques. Ici, aucune barre de progression : votre savoir est votre seule limite.</p>
+                <span class="btn-primary disabled" data-translate>Démo en développement</span>
+            </div>
+            <div class="preview-box">
+                <picture>
+                    <source srcset="../assets/kios-pure-world.webp" type="image/webp">
+                    <img src="../assets/kios-pure-world.jpg" alt="Kios — Monde vivant en perpétuelle évolution" width="800" height="500" loading="lazy" decoding="async">
+                </picture>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title" data-translate>Le système véritable de la nature</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <h3 data-translate>L'immersion totale</h3>
+                    <p data-translate>Aucun menu, aucune interface. Juste vous, vos gestes, et la nature. Apprenez par l'observation pure et devenez un habitant éclairé de ce monde vivant.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>Le système de vie autonome</h3>
+                    <p data-translate>Kios n'est pas un système rigide, c'est un écosystème qui respire. L'équilibre biologique suit ses propres lois, des cycles climatiques à l'évolution des espèces, indépendamment du joueur.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>La progression par l'expérience réelle</h3>
+                    <p data-translate>Il n'y a pas de niveaux ou de points d'expérience artificiels. Votre progression est votre savoir acquis. Chaque technique, chaque réflexe de survie devient une part de vous-même.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="discussion-title" data-translate>Retours bêta Kios</h2>
+            <p class="discussion-subtitle" data-translate>Partagez vos impressions sur la vision de Kios. Aucune inscription requise — la parole est à vous.</p>
+
+            <div class="form-card">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label data-translate>Pseudonyme</label>
+                        <input type="text" id="pseudo" data-translate-placeholder placeholder="Votre pseudo">
+                    </div>
+                    <div class="form-group">
+                        <label data-translate>Message</label>
+                        <textarea id="msg" rows="3" data-translate-placeholder placeholder="Partagez vos idées…"></textarea>
+                    </div>
+                    <button type="button" class="btn-submit" data-translate onclick="addComment()">Envoyer</button>
+                </div>
+            </div>
+
+            <div class="comment-list" id="commentList"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer" data-translate>&copy; 2026 Weidler Studio. Tous droits réservés.</footer>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/comments.js"></script>
+</body>
+</html>

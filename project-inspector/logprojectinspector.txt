@@ -1,0 +1,203 @@
+### FILE: NexusBridge.zip
+
+=== PROJECT INSPECTOR REPORT ===
+
+Project: NexusBridge.zip
+
+## PROJECT IDENTITY
+
+Detected Language:
+- Python
+
+Packaging:
+- PyInstaller
+
+Project Type:
+- Desktop Application
+
+Integrations:
+- Discord
+
+Persistence:
+- None detected
+
+Risk Indicators:
+- PowerShell scripts
+- Batch scripts
+- VBScript present
+
+## PROJECT PURPOSE
+
+Likely Purpose:
+- Discord / AI Bridge
+
+Confidence:
+- High
+
+Evidence:
+- Discord integration detected
+- Cursor integration detected
+- Message relay patterns detected
+
+## KEY FINDINGS
+
+- Discord / AI Bridge detected
+- PyInstaller desktop application detected
+- Windows Defender found no threats
+- No persistence mechanisms detected
+- Runtime Discord integration detected
+- Multiple automation scripts present
+- Archive contains significant build artifacts
+- Clean archive recommended for sharing
+
+## FILES
+
+Total Files: 2520
+Total Folders: 264
+Extensions: .txt (319), .msg (290), .enc (164), .tcl (138), .dll (106), .pyd (64), .pyc (25), .py (21), .gif (20), .sample (14), .json (11), .tm (10), .bat (6), .md (6), .log (5), .toc (5), .eps (4), .ps1 (4), .exe (3), .ico (3), .png (3), .zip (3), .apache (2), .bsd (2), .pem (2), .terms (2), .typed (2), .2026-05-28 (1), .2026-05-29 (1), .2026-05-30 (1), .2026-05-31 (1), .html (1), .pkg (1), .pyz (1), .spec (1), .vbs (1)
+EXE: 3
+DLL: 106
+BAT: 6
+CMD: 0
+VBS: 1
+PS1: 4
+PY: 21
+JS: 0
+APK: 0
+
+## BUILD ARTIFACTS
+
+Source Files: 1438
+Generated/Build Files: 1082
+Source Size: 54.3 MB
+Generated/Build Size: 77.8 MB
+
+Build Artifacts Detected:
+  - build/
+  - dist/
+  - __pycache__/
+
+## PROJECT HEALTH
+
+Repository:
+- Git detected: Yes
+
+Build Artifacts:
+- Build artifacts included: Yes
+- Generated/build files represent 42.9% of the ZIP
+- Recommendation: Exclude build/, dist/, __pycache__/ before sharing project archives.
+
+Archive Size:
+- Source size: 54.3 MB
+- Generated/build size: 77.8 MB
+- Estimated clean archive size: 54.3 MB
+
+Sharing Recommendation:
+- This ZIP contains many generated files.
+- For code review or AI analysis, share a clean source ZIP instead.
+
+## PROJECT STRUCTURE
+
+Total Size: 132.1 MB
+
+Largest Folders:
+  - NexusBridge (132.1 MB)
+  - NexusBridge\bridge (80.1 MB)
+  - NexusBridge\bridge\dist (51.8 MB)
+  - NexusBridge\bridge\dist\NEXUS Bridge (51.8 MB)
+  - NexusBridge\_internal (44.2 MB)
+  - NexusBridge\bridge\dist\NEXUS Bridge\_internal (44.2 MB)
+  - NexusBridge\bridge\build (25.7 MB)
+  - NexusBridge\bridge\build\nexus_bridge (25.7 MB)
+  - NexusBridge\bridge\dist\NEXUS Bridge\_internal\cryptography (9.4 MB)
+  - NexusBridge\bridge\dist\NEXUS Bridge\_internal\cryptography\hazmat (9.4 MB)
+
+Largest Files:
+  - NexusBridge\bridge\dist\NEXUS Bridge\_internal\cryptography\hazmat\bindings\_rust.pyd (9.4 MB)
+  - NexusBridge\_internal\cryptography\hazmat\bindings\_rust.pyd (9.4 MB)
+  - NexusBridge\NexusBridge.exe (7.7 MB)
+  - NexusBridge\bridge\build\nexus_bridge\NEXUS Bridge.exe (7.7 MB)
+  - NexusBridge\bridge\dist\NEXUS Bridge\NEXUS Bridge.exe (7.7 MB)
+  - NexusBridge\bridge\build\nexus_bridge\NEXUS Bridge.pkg (7.3 MB)
+  - NexusBridge\bridge\build\nexus_bridge\PYZ-00.pyz (7.2 MB)
+  - NexusBridge\_internal\python312.dll (6.6 MB)
+  - NexusBridge\bridge\dist\NEXUS Bridge\_internal\python312.dll (6.6 MB)
+  - NexusBridge\bridge\dist\NEXUS Bridge\_internal\pydantic_core\_pydantic_core.cp312-win_amd64.pyd (5.0 MB)
+
+## NETWORK SUMMARY
+
+Project URLs: 1
+Service URLs: 1
+Reference URLs: 2 (hidden)
+Content URLs: 3 (hidden)
+Dependency URLs: 4 (hidden)
+
+## NETWORK
+
+Project URLs:
+  - nexus.local
+
+Service URLs:
+  - discord.com/api/v10/users/@me
+(2477 dependency/build files skipped during network scan)
+
+## AUTOMATION
+
+No startup references found
+No scheduled task references found
+No Windows services found
+
+## WINDOWS DEFENDER
+
+Engine:
+- Microsoft Defender
+
+Status:
+- Completed
+
+Files Scanned:
+- 2520
+
+Threats Detected:
+- 0
+
+Result:
+- No threats found
+
+Defender Output:
+Scan starting...
+Scan finished.
+Scanning C:\Users\franc\AppData\Local\Temp\project_inspector_p62o0_mt found no threats.
+
+## SECURITY SUMMARY
+
+Windows Defender:
+- Clean
+
+Scripts:
+- PowerShell: 4
+- Batch/CMD: 6
+- VBScript: 1
+
+Executables:
+- EXE: 3
+- DLL: 106
+
+Persistence:
+- None detected
+
+Network Activity:
+- Discord
+- Custom endpoints
+
+Project Risk Profile:
+- High Attention
+
+## WARNINGS
+
+PowerShell scripts detected
+Batch/CMD scripts detected
+VBScript files detected
+Executable files detected
+
+=== END REPORT ===

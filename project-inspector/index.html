@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta name="color-scheme" content="dark">
+    <title>Project Inspector | Weidler Studio</title>
+    <link rel="icon" href="../logo%20weidlerstudio.png" type="image/png">
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="project-inspector.css">
+</head>
+<body>
+    <script src="../js/site-bg.js"></script>
+
+    <header class="site-header">
+        <div class="header-top">
+            <div class="header-brand">
+                <a href="../index.html" class="logo-link">
+                    <img src="../logo weidlerstudio.png" alt="" class="logo-icon" width="36" height="36">
+                    <span class="logo-text">Weidler <span>Studio</span></span>
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+                <a href="../index.html" data-translate>Accueil</a>
+                <a href="../kios/index.html">Kios</a>
+                <a href="../cribleplus/index.html">Crible+</a>
+                <a href="../haven/index.html">Haven</a>
+                <a href="../nexus-bridge/index.html">Nexus Bridge</a>
+                <a href="index.html" class="active">Project Inspector</a>
+            </nav>
+            <a href="../index.html#contact" class="header-contact" data-translate>Contact</a>
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
+        </div>
+        <div class="lang-bar">
+            <span class="lang-status" id="langStatus" data-translate>Traduction…</span>
+            <nav class="lang-switcher" id="langFlags" aria-label="Choisir la langue">
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="de">DE</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="es">ES</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="it">IT</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="zh-CN">ZH</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="ja">JA</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-lang="pt">PT</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero pi-hero">
+            <div>
+                <span class="badge badge-tool" data-translate>Outil</span>
+                <h1>Project Inspector</h1>
+                <p class="lead"><strong data-translate>Analysez un projet logiciel en quelques secondes.</strong></p>
+                <p class="lead" data-translate>Project Inspector transforme un dossier compressé en rapport technique clair. Glissez un fichier ZIP dans l'application, laissez l'analyse se faire automatiquement, puis récupérez une vue structurée du projet : technologies détectées, architecture, fichiers importants, dépendances, intégrations réseau et indicateurs de risque.</p>
+                <a href="#rapport-genere" class="btn-primary" data-translate>Voir le rapport généré</a>
+            </div>
+        </section>
+
+        <figure class="pi-screenshot">
+            <img src="projectinspector.png" alt="Project Inspector — interface d'analyse de projet" width="1280" height="720" loading="lazy" decoding="async">
+        </figure>
+
+        <section class="features-section">
+            <h2 class="features-title" data-translate>Ce que l'outil détecte</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <h3 data-translate>Technologies et identité du projet</h3>
+                    <p data-translate>Détecte le type de projet, les langages utilisés, les frameworks, le packaging et les indices permettant de comprendre rapidement à quoi sert le logiciel.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>Structure et fichiers importants</h3>
+                    <p data-translate>Repère les fichiers principaux, dossiers critiques, scripts, points d'entrée et éléments qui méritent l'attention lors d'une analyse.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>Intégrations et réseau</h3>
+                    <p data-translate>Identifie les services, API, URLs, dépendances externes et communications possibles avec des outils comme Discord, OpenAI, Cursor ou d'autres services.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>Indicateurs de risque</h3>
+                    <p data-translate>Met en évidence les éléments sensibles : persistance, autostart, scripts exécutables, intégrations réseau, comportements inhabituels ou zones à vérifier.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="features-section" id="rapport-genere" aria-labelledby="pi-report-title">
+            <h2 class="features-title" id="pi-report-title" data-translate>Un rapport prêt à copier</h2>
+            <p class="pi-report-intro" data-translate>Project Inspector ne se contente pas d'afficher une interface. Il génère un rapport structuré, pensé pour être copié dans ChatGPT, Cursor ou tout autre outil d'analyse afin d'accélérer le diagnostic d'un projet.</p>
+            <pre class="pi-report-log" aria-label="Exemple de rapport Project Inspector"><code id="pi-report-content"></code></pre>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title" data-translate>Flux de travail</h2>
+            <ol class="pi-workflow">
+                <li class="pi-workflow-step">
+                    <span class="pi-workflow-num" aria-hidden="true">1</span>
+                    <p data-translate>Glisser un ZIP</p>
+                </li>
+                <li class="pi-workflow-step">
+                    <span class="pi-workflow-num" aria-hidden="true">2</span>
+                    <p data-translate>Analyse automatique</p>
+                </li>
+                <li class="pi-workflow-step">
+                    <span class="pi-workflow-num" aria-hidden="true">3</span>
+                    <p data-translate>Rapport structuré</p>
+                </li>
+                <li class="pi-workflow-step">
+                    <span class="pi-workflow-num" aria-hidden="true">4</span>
+                    <p data-translate>Copier le résultat</p>
+                </li>
+                <li class="pi-workflow-step">
+                    <span class="pi-workflow-num" aria-hidden="true">5</span>
+                    <p data-translate>Envoyer à ChatGPT ou Cursor</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title" data-translate>Pourquoi c'est utile</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <h3 data-translate>Comprendre vite</h3>
+                    <p data-translate>Obtenez rapidement une vue d'ensemble d'un projet inconnu, même sans ouvrir chaque fichier manuellement.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>Préparer un diagnostic</h3>
+                    <p data-translate>Repérez les zones importantes avant de demander de l'aide, corriger un bogue ou analyser une architecture.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>Documenter un projet</h3>
+                    <p data-translate>Transformez un dossier complexe en résumé lisible, utile pour partager l'état d'un projet avec un client, un collègue ou une IA.</p>
+                </article>
+                <article class="feature-card">
+                    <h3 data-translate>Gagner du temps</h3>
+                    <p data-translate>Réduisez le temps passé à explorer manuellement les fichiers et concentrez-vous sur les décisions importantes.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" data-translate>&copy; 2026 Weidler Studio. Tous droits réservés.</footer>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script>
+        fetch("logprojectinspector.txt")
+            .then(function (response) {
+                if (!response.ok) throw new Error("Rapport indisponible");
+                return response.text();
+            })
+            .then(function (text) {
+                document.getElementById("pi-report-content").textContent = text;
+            })
+            .catch(function () {
+                document.getElementById("pi-report-content").textContent = "Rapport indisponible.";
+            });
+    </script>
+</body>
+</html>

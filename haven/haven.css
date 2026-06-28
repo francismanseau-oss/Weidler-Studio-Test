@@ -1,0 +1,117 @@
+/* ── Haven — page produit ── */
+
+.haven-hero {
+    display: block;
+    margin-bottom: clamp(36px, 6vw, 52px);
+    text-align: center;
+}
+
+.haven-hero .haven-subtitle {
+    font-size: clamp(1.15rem, 3.2vw, 1.45rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.35;
+    margin-bottom: clamp(20px, 4vw, 28px);
+    max-width: 36ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.haven-hero .lead {
+    max-width: 62ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.haven-hero .lead:last-of-type {
+    margin-bottom: 0;
+}
+
+.haven-hero .badge {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Captures d'écran ── */
+.haven-shots-section {
+    margin-bottom: clamp(40px, 6vw, 56px);
+    display: flex;
+    justify-content: center;
+}
+
+.haven-shots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    width: auto;
+    max-width: min(420px, 100%);
+}
+
+.haven-shot {
+    flex: 1 1 0;
+    min-width: 0;
+    width: min(140px, 33.333%);
+    max-width: 140px;
+    overflow: hidden;
+    border-radius: 0;
+    border: 1px solid rgba(34, 211, 238, 0.28);
+    margin-left: -1px;
+    background: var(--bg-card);
+    box-shadow: var(--glow-cyan);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.haven-shot:first-child {
+    margin-left: 0;
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.haven-shot:last-child {
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.haven-shot:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow: var(--glow-violet), 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.haven-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ── Bénéfices ── */
+.haven-benefits .feature-card {
+    text-align: left;
+}
+
+.haven-benefits .feature-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.haven-benefits .feature-card p {
+    margin-bottom: 0.85em;
+}
+
+.haven-benefits .feature-card p:last-child {
+    margin-bottom: 0;
+}
+
+.haven-cta {
+    text-align: center;
+    margin-bottom: clamp(32px, 6vw, 48px);
+}
+
+@media (max-width: 768px) {
+    .haven-hero .lead {
+        text-align: left;
+    }
+}
