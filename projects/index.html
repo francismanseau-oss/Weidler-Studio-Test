@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a0e1a">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="light dark">
 <meta name="description" content="Projets Weidler Studio : Crible+, Haven, Nexus Bridge, Project Inspector et Kios.">
 <title>Projets | Weidler Studio</title>
 <link rel="icon" href="../assets/logo/favicon.png" type="image/png">
-<link rel="stylesheet" href="../css/site.css">
+<script src="../js/theme.js"></script>
+<link rel="stylesheet" href="../css/site.css?v=5">
+<link rel="stylesheet" href="../css/themes.css?v=5">
 
 <style>
 :root {
@@ -50,7 +52,6 @@ body {
     font-family: var(--font);
     line-height: 1.5;
     overflow-x: hidden;
-    padding-top: var(--header-h);
     position: relative;
     isolation: isolate;
 }
@@ -187,36 +188,6 @@ main.page-projects {
     opacity: 1;
     transition: opacity .3s ease;
     text-align: left;
-}
-
-.project-back-top {
-    display: flex;
-    justify-content: center;
-    margin: clamp(32px, 6vw, 48px) auto 0;
-}
-
-.project-back-top button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 46px;
-    padding: 0 18px;
-    border-radius: 999px;
-    border: 1px solid rgba(34, 211, 238, 0.38);
-    background: rgba(12, 18, 32, 0.92);
-    color: var(--text);
-    font: inherit;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 0 14px rgba(34, 211, 238, 0.10);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-}
-
-.project-back-top button:hover {
-    background: rgba(16, 28, 48, 0.98);
-    border-color: rgba(34, 211, 238, 0.62);
-    box-shadow: 0 0 18px rgba(34, 211, 238, 0.24);
-    transform: translateY(-1px);
 }
 
 .page-hero,
@@ -845,13 +816,176 @@ main.page-projects {
     }
 }
 
-@media (max-width: 520px) {
-    .pi-workflow {
-        grid-template-columns: 1fr;
+@media (max-width: 640px) {
+    /* Même colonne d’alignement que .project-detail (min(760px, 92%) sur PC) */
+    .projects-carousel {
+        width: min(760px, 92%);
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    .carousel {
+        width: 100%;
+    }
+
+    /* Carrousel — image active seule, sans bandes latérales */
+    .carousel-track {
+        gap: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .carousel-item:not(.active) {
+        display: none;
+    }
+
+    .carousel-item.active {
+        width: min(240px, 74vw);
+        height: min(240px, 74vw);
+        transform: none;
+    }
+
+    /* Contenu sous le carrousel — progression et espacements cohérents */
+    .project-detail {
+        margin-top: clamp(24px, 5vw, 32px);
+    }
+
+    .page-hero,
+    .features-section,
+    .screenshots-section {
+        margin-top: clamp(20px, 4.5vw, 28px);
+        padding: clamp(18px, 4vw, 22px);
+    }
+
+    .haven-summary-box {
+        margin-top: 0;
+        margin-bottom: clamp(20px, 4.5vw, 28px);
+        padding: clamp(18px, 4vw, 22px);
+    }
+
+    .project-detail > *:first-child {
+        margin-top: 0;
+    }
+
+    .features-title,
+    .screenshots-title {
+        margin-bottom: clamp(14px, 3vw, 18px);
+    }
+
+    .hero-app-shot,
+    .pi-screenshot {
+        margin-top: clamp(20px, 4.5vw, 28px);
+        margin-bottom: clamp(20px, 4.5vw, 28px);
+    }
+
+    .pi-hero {
+        margin-bottom: clamp(20px, 4.5vw, 28px);
+    }
+
+    .haven-shots-section {
+        margin-bottom: clamp(20px, 4.5vw, 28px);
+    }
+
+    .lead + .lead {
+        margin-top: 0.85em;
+    }
+
+    .discussion-subtitle {
+        margin-bottom: clamp(16px, 3vw, 20px);
+    }
+
+    /* Grilles — une colonne, texte lisible (dont « Comment ça fonctionne ») */
+    .features-grid,
+    .nexus-advantages-grid,
+    .haven-benefits-grid,
+    .pi-features-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(14px, 3vw, 18px);
+    }
+
+    .feature-card {
+        padding: clamp(16px, 4vw, 20px);
+        text-align: left;
+    }
+
+    .feature-card h3 {
+        margin-bottom: 8px;
+    }
+
+    .pi-section.features-section,
+    .haven-benefits.features-section,
+    .cribleplus-benefits.features-section,
+    .kios-section.features-section {
+        padding: 0;
+        margin-top: clamp(24px, 5vw, 32px);
+    }
+
+    .pi-workflow {
+        grid-template-columns: 1fr;
+        gap: clamp(12px, 3vw, 16px);
+    }
+
+    .pi-workflow-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: clamp(16px, 4vw, 20px);
+        text-align: left;
+    }
+
+    .pi-workflow-num {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .pi-workflow-step p {
+        text-align: left;
+    }
+
+    /* Haven — captures empilées pour une lecture verticale */
+    .haven-shots {
+        flex-direction: column;
+        gap: clamp(12px, 3vw, 16px);
+    }
+
+    .haven-shot {
+        flex: none;
+        width: 100%;
+        margin: 0;
+        border-radius: var(--radius);
+    }
+
+    .haven-shot:first-child,
+    .haven-shot:last-child {
+        border-radius: var(--radius);
+    }
+}
+
+@media (max-width: 520px) {
     .pi-screenshot {
         max-width: min(520px, 94vw);
+    }
+
+    .carousel {
+        grid-template-columns: 36px minmax(0, 1fr) 36px;
+        gap: 8px;
+    }
+
+    .carousel-item.active {
+        width: min(220px, 72vw);
+        height: min(220px, 72vw);
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .pi-report-log {
+        white-space: pre-wrap;
+        overflow-x: auto;
+        font-size: 0.7rem;
     }
 }
 
@@ -896,6 +1030,7 @@ main.page-projects {
     }
 }
 </style>
+<link rel="stylesheet" href="../css/mobile-readability.css?v=5">
 </head>
 
 <body data-nav-root="../" data-nav-active="projects">
@@ -977,6 +1112,9 @@ main.page-projects {
 <footer class="site-footer" data-translate>&copy; 2026 Weidler Studio. Tous droits réservés.</footer>
 
 <script src="../js/nav.js"></script>
+<script src="../js/mobile-nav.js"></script>
+<script src="../js/portrait-lock.js"></script>
+<script src="../js/back-to-top.js"></script>
 <script src="../js/i18n.js"></script>
 <script>
 const projects = [
@@ -1351,21 +1489,6 @@ function renderCarousel() {
     });
 
     detail.innerHTML = projects[currentIndex].template;
-    detail.insertAdjacentHTML("beforeend", `
-        <div class="project-back-top">
-            <button type="button" class="project-back-top-btn">↑ Retour aux projets</button>
-        </div>
-    `);
-
-    const backTopBtn = detail.querySelector(".project-back-top-btn");
-    if (backTopBtn) {
-        backTopBtn.addEventListener("click", () => {
-            document.querySelector("#projectsCarousel").scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-        });
-    }
 
     if (projects[currentIndex].id === "project-inspector") {
         const reportContent = document.getElementById("pi-report-content");

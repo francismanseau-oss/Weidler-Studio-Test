@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0a0e1a">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="light dark">
     <title>Weidler Studio</title>
     <link rel="icon" href="assets/logo/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/home.css">
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/site.css?v=5">
+    <link rel="stylesheet" href="css/themes.css?v=5">
+    <link rel="stylesheet" href="css/home.css?v=5">
+    <link rel="stylesheet" href="css/mobile-readability.css?v=5">
 </head>
 <body class="page-home" data-nav-root="" data-nav-active="home">
     <script src="js/site-bg.js"></script>
@@ -57,7 +60,6 @@
             <button type="button" class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
         </div>
     </header>
-
     <main>
         <section class="home-hero">
             <h1 class="home-title">
@@ -66,9 +68,6 @@
             </h1>
             <p class="home-lead" data-translate>Je conçois des logiciels, des outils et des automatisations en prenant le temps d'écouter, d'analyser et de comprendre votre besoin avant d'écrire la première ligne de code.</p>
             <p class="home-subtitle" data-translate>Concepteur • Développeur • Automatisation • Diagnostic logiciel</p>
-            <div class="hero-actions">
-                <a href="projects/index.html" class="btn home-btn--primary" data-translate>Découvrir mes projets →</a>
-            </div>
         </section>
 
         <section class="home-section" aria-labelledby="section-services">
@@ -136,6 +135,9 @@
     </footer>
 
     <script src="js/nav.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/portrait-lock.js"></script>
+    <script src="js/back-to-top.js"></script>
     <script src="js/i18n.js"></script>
 </body>
 </html>
