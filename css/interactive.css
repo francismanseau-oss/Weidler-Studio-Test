@@ -201,6 +201,41 @@ select {
     cursor: pointer;
 }
 
+.page-soumission .submission-select-toggle {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.page-soumission .submission-select-toggle:hover,
+.page-soumission .submission-select-toggle:focus-visible,
+.page-soumission .submission-select-custom.is-open .submission-select-toggle {
+    border-color: rgba(34, 211, 238, 0.55);
+    box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.18);
+    outline: none;
+}
+
+.page-soumission .submission-select-option {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.15s ease, background 0.15s ease;
+}
+
+.page-soumission .submission-select-option:hover,
+.page-soumission .submission-select-option:focus-visible {
+    color: var(--text);
+    background: var(--accent-soft);
+    outline: none;
+}
+
+.page-soumission .submission-select-custom.is-open .submission-select-chevron {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.page-soumission .submission-select-toggle.submission-field-invalid {
+    border-color: rgba(252, 165, 165, 0.7) !important;
+    box-shadow: 0 0 0 1px rgba(252, 165, 165, 0.18) !important;
+}
+
 /* ── Commentaires / liens secondaires ── */
 .btn-translate-comment {
     cursor: pointer;
