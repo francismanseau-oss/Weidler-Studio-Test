@@ -1,5 +1,6 @@
 (function () {
     var MOBILE_MQ = "(max-width: 640px)";
+    var TOUCH_MQ = "(hover: none) and (pointer: coarse)";
     var SELECT_IDS = [
         "requestType",
         "platformType",
@@ -11,8 +12,11 @@
     var wrappers = [];
     var mounted = false;
 
-    function isMobile() {
-        return window.matchMedia(MOBILE_MQ).matches;
+    function shouldUseCustomSelect() {
+        return (
+            window.matchMedia(MOBILE_MQ).matches ||
+            window.matchMedia(TOUCH_MQ).matches
+        );
     }
 
     function getSelectedLabel(select) {
@@ -203,7 +207,7 @@
     }
 
     function mountAll() {
-        if (!document.body.classList.contains("page-soumission") || !isMobile() || mounted) {
+        if (!document.body.classList.contains("page-soumission") || !shouldUseCustomSelect() || mounted) {
             return;
         }
 
@@ -225,7 +229,7 @@
     }
 
     function refresh() {
-        if (isMobile()) {
+        if (shouldUseCustomSelect()) {
             if (!mounted) mountAll();
         } else if (mounted) {
             unmountAll();
