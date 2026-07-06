@@ -466,14 +466,25 @@ a.project-card-link h3 { color: var(--text); }
     color: var(--text);
 }
 
+.page-soumission .submission-select-custom.is-open {
+    z-index: 250;
+}
+
 .page-soumission .submission-select-menu {
-    background-color: var(--bg-card);
+    background-color: rgb(12, 18, 32);
     border: 1px solid var(--border);
     border-radius: 10px;
+    opacity: 1;
+    z-index: 250;
+}
+
+html[data-theme="day"] .page-soumission .submission-select-menu,
+html[data-theme="auto"][data-theme-effective="day"] .page-soumission .submission-select-menu {
+    background-color: rgb(255, 255, 255);
 }
 
 .page-soumission .submission-select-option {
-    background: transparent;
+    background-color: inherit;
     color: var(--text-muted-soft);
     border-bottom-color: var(--border);
 }

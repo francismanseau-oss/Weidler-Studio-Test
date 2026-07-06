@@ -1557,7 +1557,7 @@ a.project-card-link .badge {
         top: calc(100% + 4px);
         left: 0;
         right: 0;
-        z-index: 120;
+        z-index: 250;
         max-height: min(280px, 52vh);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
@@ -1791,7 +1791,7 @@ a.project-card-link .badge {
         top: calc(100% + 4px);
         left: 0;
         right: 0;
-        z-index: 120;
+        z-index: 250;
         max-height: min(280px, 52vh);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
