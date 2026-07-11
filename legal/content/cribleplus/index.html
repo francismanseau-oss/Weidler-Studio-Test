@@ -38,17 +38,6 @@
             margin-bottom: clamp(28px, 5vw, 40px);
         }
 
-        .legal-bundle-meta {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px 20px;
-            margin: 0 0 clamp(18px, 3vw, 24px);
-            color: var(--text-muted-soft);
-            font-size: clamp(0.82rem, 2vw, 0.9rem);
-            line-height: 1.65;
-        }
-
         .legal-bundle-sections {
             display: grid;
             gap: clamp(18px, 3vw, 24px);
@@ -99,8 +88,7 @@
             cursor: pointer;
         }
 
-        a.legal-toc-link,
-        #legalDocNav a {
+        a.legal-toc-link {
             text-decoration: none;
         }
 
@@ -169,12 +157,6 @@
             <p>Documents juridiques — Weidler Studio</p>
         </header>
 
-        <nav class="legal-doc-nav" id="legalDocNav" aria-label="Navigation entre les documents juridiques">
-            <a href="#privacy">Politique de confidentialité</a>
-            <a href="#terms">Conditions d'utilisation</a>
-            <a href="#legal-notice">Mentions légales</a>
-        </nav>
-
         <p class="legal-bundle-status" id="legalBundleStatus">Chargement des documents…</p>
         <div class="legal-accordion" id="legalDocuments" hidden aria-label="Documents juridiques Crible+"></div>
 
@@ -228,6 +210,12 @@
 
             function openAccordionItem(item, button) {
                 if (!item || !button) return;
+                containerEl.querySelectorAll(".legal-accordion-item.is-open").forEach(function (openItem) {
+                    if (openItem === item) return;
+                    openItem.classList.remove("is-open");
+                    var openBtn = openItem.querySelector(".legal-accordion-trigger");
+                    if (openBtn) openBtn.setAttribute("aria-expanded", "false");
+                });
                 item.classList.add("is-open");
                 button.setAttribute("aria-expanded", "true");
             }
@@ -250,22 +238,6 @@
                 return "";
             }
 
-            function setActiveNav() {
-                var hash = (location.hash || "").replace(/^#/, "");
-                var activeDoc = resolveDocIdFromHash(hash);
-
-                document.querySelectorAll("#legalDocNav a").forEach(function (link) {
-                    var target = (link.getAttribute("href") || "").replace(/^#/, "");
-                    var isActive = target === activeDoc;
-                    link.classList.toggle("active", isActive);
-                    if (isActive) {
-                        link.setAttribute("aria-current", "location");
-                    } else {
-                        link.removeAttribute("aria-current");
-                    }
-                });
-            }
-
             function openDocById(docId, scroll) {
                 if (!docId) return;
                 var item = document.getElementById(docId);
@@ -273,7 +245,6 @@
                 if (!item || !button) return;
 
                 openAccordionItem(item, button);
-                setActiveNav();
 
                 if (!scroll) return;
                 window.requestAnimationFrame(function () {
@@ -320,10 +291,6 @@
                         '<div class="legal-accordion-panel" id="' + panelId + '" role="region" aria-labelledby="' + triggerId + '">' +
                             '<div class="legal-accordion-panel-inner">' +
                                 '<div class="legal-accordion-body">' +
-                                    '<div class="legal-bundle-meta">' +
-                                        "<span>Version " + escapeHtml(data.version) + "</span>" +
-                                        "<span>" + escapeHtml(data.updated) + "</span>" +
-                                    "</div>" +
                                     '<nav class="legal-toc" aria-label="Sommaire — ' + escapeHtml(data.documentTitle) + '">' +
                                         '<p class="legal-toc-title">Sommaire</p>' +
                                         '<ul class="legal-toc-list">' + tocItems + "</ul>" +
@@ -344,7 +311,6 @@
                         if (item && item.id && history.replaceState) {
                             history.replaceState(null, "", "#" + item.id);
                         }
-                        setActiveNav();
                     });
                 });
 
@@ -370,23 +336,6 @@
                                 });
                             });
                         }
-                        setActiveNav();
-                    });
-                });
-            }
-
-            function bindDocNav() {
-                document.querySelectorAll("#legalDocNav a").forEach(function (link) {
-                    link.addEventListener("click", function (event) {
-                        var target = (link.getAttribute("href") || "").replace(/^#/, "");
-                        if (!target) return;
-                        event.preventDefault();
-                        if (history.replaceState) {
-                            history.replaceState(null, "", "#" + target);
-                        } else {
-                            location.hash = target;
-                        }
-                        openDocById(target, true);
                     });
                 });
             }
@@ -415,13 +364,11 @@
                 statusEl.hidden = true;
                 containerEl.hidden = false;
                 bindAccordion();
-                bindDocNav();
 
                 var initialDoc = resolveDocIdFromHash((location.hash || "").replace(/^#/, ""));
                 if (initialDoc) {
                     openDocById(initialDoc, true);
                 }
-                setActiveNav();
             }
 
             if (inlineTopBtn) {
@@ -436,7 +383,6 @@
             window.addEventListener("hashchange", function () {
                 var docId = resolveDocIdFromHash((location.hash || "").replace(/^#/, ""));
                 if (docId) openDocById(docId, true);
-                setActiveNav();
             });
 
             loadDocuments().catch(function () {
