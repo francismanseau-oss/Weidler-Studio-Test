@@ -171,6 +171,10 @@
     .about-story {
         max-width: 62ch;
     }
+
+    .about-principles {
+        padding-left: 0.75rem;
+    }
 }
 
 @media (max-width: 480px) {
