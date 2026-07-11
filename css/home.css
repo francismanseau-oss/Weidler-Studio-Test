@@ -728,9 +728,8 @@
     }
 
     /*
-     * Accueil : aligner thème + flèche swipe sur Services (layout.css).
-     * home.css charge après layout.css — toute règle .page-home ici l’emporte.
-     * Ne pas réintroduire de position fixed / tailles réduites locales.
+     * Accueil : mêmes ancrages que layout.css (flèche seule = aussi fixe).
+     * home.css ne doit plus redéfinir position/top/transform de façon partielle.
      */
     .page-home .site-header .theme-drawer {
         position: absolute;
@@ -741,30 +740,15 @@
     }
 
     .page-home .mobile-swipe-hint {
-        position: fixed;
-        min-width: 0;
-        min-height: 0;
-        width: auto;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        border: none;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
         opacity: 0.72;
     }
 
     .page-home .mobile-swipe-hint svg {
-        display: block;
-        width: 20px;
-        height: 32px;
-        flex-shrink: 0;
         filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.28));
     }
 
     .page-home .mobile-swipe-hint:active {
-        transform: translateY(-50%) scale(0.96);
+        transform: translate3d(0, -50%, 0) scale(0.96);
     }
 }
 /* Accueil — remontée titre (PC uniquement) */

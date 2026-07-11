@@ -349,17 +349,17 @@ a.project-card-link {
 
     .mobile-swipe-hint:active {
         opacity: 0.9;
-        transform: translateY(-50%) scale(0.96);
+        transform: translate3d(0, -50%, 0) scale(0.96);
     }
 
     @keyframes mobile-swipe-hint-intro {
         0%, 100% {
             opacity: 0.72;
-            transform: translateY(-50%) scale(1);
+            transform: translate3d(0, -50%, 0) scale(1);
         }
         50% {
             opacity: 1;
-            transform: translateY(-50%) scale(1.08);
+            transform: translate3d(0, -50%, 0) scale(1.08);
         }
     }
 
