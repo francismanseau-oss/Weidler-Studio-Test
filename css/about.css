@@ -65,21 +65,13 @@
     border-radius: 50%;
     overflow: hidden;
     padding: clamp(4px, 1vw, 5px);
-    background: linear-gradient(180deg, rgba(14, 20, 36, 0.95) 0%, rgba(6, 8, 16, 0.98) 100%);
+    background: transparent;
     border: 1px solid rgba(56, 80, 120, 0.45);
-    box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.35);
+    box-shadow: none;
 }
 
 .about-portrait__frame::before {
-    content: "";
-    position: absolute;
-    inset: clamp(4px, 1vw, 5px);
-    border-radius: 50%;
-    background:
-        radial-gradient(circle at 35% 28%, rgba(34, 211, 238, 0.12) 0%, transparent 52%),
-        radial-gradient(circle at 68% 72%, rgba(139, 92, 246, 0.1) 0%, transparent 48%),
-        linear-gradient(165deg, rgba(20, 28, 48, 0.92) 0%, rgba(10, 14, 26, 0.96) 100%);
-    z-index: 0;
+    content: none;
 }
 
 .about-portrait__photo {
@@ -88,9 +80,10 @@
     display: block;
     width: 100%;
     height: 100%;
-    aspect-ratio: 1;
     object-fit: cover;
+    object-position: center;
     border-radius: 50%;
+    background: transparent;
 }
 
 .about-portrait__photo.about-portrait__photo--missing {
